@@ -1,0 +1,209 @@
+//                                                    
+// ,--.   ,--.                 ,--.                   
+// |  |   |  | ,--,--.,--. ,--.|  |-.  ,--,--.,--.--. 
+// |  |.'.|  |' ,-.  | \  '  / | .-. '' ,-.  ||  .--' 
+// |   ,'.   |\ '-'  |  \   '  | `-' |\ '-'  ||  |    
+// '--'   '--' `--`--'.-'  /    `---'  `--`--'`--'    
+//  ,-----.           `---',---.,--.                  
+// '  .--./ ,---. ,--,--, /  .-'`--' ,---.            
+// |  |    | .-. ||      \|  `-,,--.| .-. |           
+// '  '--'\' '-' '|  ||  ||  .-'|  |' '-' '           
+//  `-----' `---' `--''--'`--'  `--'.`-  /            
+//                                  `---'             
+
+
+{
+	"layer": "top",
+	"position": "bottom",
+
+	"modules-left": [
+		"clock",
+		"mpd",
+    "hyprland/language"
+	],
+
+	"modules-center": [
+		"hyprland/workspaces"
+	],
+
+	"modules-right": [
+    "disk",
+		"network",
+		"wireplumber"
+	],
+
+	// Modules
+
+	"bluetooth": {
+		"format": "<span color=\"#D9BC8C\"></span> Bluetooth",
+		"on-click": "blueman-manager"
+		},
+
+	"battery": {
+		"interval": 10,
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format-time": "{H}:{M:02}",
+		"format": "{icon} {capacity}% ({time})",
+		"format-charging": " {capacity}% ({time})",
+		"format-charging-full": " {capacity}%",
+		"format-full": "{icon} {capacity}%",
+		"format-alt": "{icon} {power}W",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"tooltip": false
+	},
+
+	"clock": {
+		"interval": 10,
+		"format": "<span rise='-1000' color=\"#8DA3B9\"></span> {:%H:%M, %B %e %Y}",
+		"tooltip": true,
+		"tooltip-format": "{:%A, %e %B %Y}"
+	},
+
+	"cpu": {
+		"interval": 5,
+		"tooltip": false,
+		"format": " {usage}%",
+		"format-alt": " {load}",
+		"states": {
+			"warning": 70,
+			"critical": 90
+		}
+	},
+
+	"hyprland/language": {
+		"format": "<span color=\"#8C977D\"></span> {}",
+		"min-length": 5,
+		"on-click": "hyprlandmsg 'input * xkb_switch_layout next'",
+		"tooltip": false
+	},
+
+	"memory": {
+		"interval": 5,
+		"format": " {used:0.1f}G/{total:0.1f}G",
+		"states": {
+			"warning": 70,
+			"critical": 90
+		},
+		"tooltip": false
+	},
+
+	"network": {
+		"interval": 5,
+		"format-wifi": "<span rise='-1000' color=\"#B66467\"></span> {bandwidthDownBits} ({signalStrength}%)",
+		"format-ethernet": "<span rise='-1000' color=\"#B66467\"></span>  {bandwidthDownBits}",
+		"format-disconnected": "No connection",
+		"tooltip": true,
+		"on-click": "nm-connection-editor"
+
+	},
+
+	"hyprland/mode": {
+		"format": "{}",
+		"tooltip": false
+	},
+
+	"hyprland/window": {
+		"format": "{}",
+		"max-length": 30,
+		"tooltip": false
+	},
+
+	"hyprland/workspaces": {
+		"disable-scroll-wraparound": true,
+		"smooth-scrolling-threshold": 4,
+		"persistant_workspaces": {
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": [],
+			"5": []
+		},
+		"enable-bar-scroll": true,
+		"format": ""
+	},
+
+	"wireplumber": {
+		"format": "<span color=\"#A988B0\"></span> {volume}%",
+		"format-muted": "<span color=\"#A988B0\"></span> Muted",
+		"scroll-step": 1,
+		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"on-click-right": "pavucontrol",
+		"tooltip": true
+	},
+
+	"temperature": {
+		"critical-threshold": 90,
+		"interval": 5,
+		"format": "{icon} {temperatureC}°",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"tooltip": false
+	},
+
+	"tray": {
+		"icon-size": 18
+		//"spacing": 10
+	},
+
+	"mpd": {
+		"interval": 1,
+		"format": "<span color=\"#8AA6A2\">♫</span> {artist} - {title}",
+		"format_paused": "{status_icon} <i>{title}</i>",
+		"tooltip-format": "{dynamic}",
+		"dynamic-len": 50,
+		"dynamic-order": ["artist", "title", "album", "position", "length"],
+		"tooltip": true,
+                "status-icons": {
+                     "paused": "⏸"
+		}
+	},
+	"disk": {
+		"format": "<span color=\"#D9BC8C\"></span> {specific_free:0.2f}G",
+		"unit": "GiB"
+	},
+	"custom/controlcenter-icon": {
+		"format": "",
+		"on-click": "swaync-client -t -sw"
+	},
+	"image": {
+		"path": "/home/pankine/Pictures/retrobutton.png",
+		"size": 50,
+		"interval": 5
+	},
+    "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  }
+}
+
+// vi:ft=jsonc

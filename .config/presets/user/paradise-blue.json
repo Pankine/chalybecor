@@ -1,0 +1,112 @@
+{
+    "name": "Paradise-Blue",
+    "variables": {
+        "accent_color": "#8DA3B9",
+        "accent_bg_color": "#8DA3B9",
+        "accent_fg_color": "#151515",
+        "destructive_color": "#B66467",
+        "destructive_bg_color": "#B66467",
+        "destructive_fg_color": "#151515",
+        "success_color": "#8C977D",
+        "success_bg_color": "#8C977D",
+        "success_fg_color": "#151515",
+        "warning_color": "#D9BC8C",
+        "warning_bg_color": "#D9BC8C",
+        "warning_fg_color": "#151515",
+        "error_color": "#B66467",
+        "error_bg_color": "#B66467",
+        "error_fg_color": "#151515",
+        "window_bg_color": "#151515",
+        "window_fg_color": "#E8E3E3",
+        "view_bg_color": "#202020",
+        "view_fg_color": "#E8E3E3",
+        "headerbar_bg_color": "#424242",
+        "headerbar_fg_color": "#E8E3E3",
+        "headerbar_border_color": "#E8E3E3",
+        "headerbar_backdrop_color": "@window_bg_color",
+        "headerbar_shade_color": "rgba(0, 0, 0, 0.36)",
+        "card_bg_color": "rgba(255,255,255,0.08)",
+        "card_fg_color": "#E8E3E3",
+        "card_shade_color": "rgba(0, 0, 0, 0.36)",
+        "dialog_bg_color": "#151515",
+        "dialog_fg_color": "#E8E3E3",
+        "popover_bg_color": "#151515",
+        "popover_fg_color": "#E8E3E3",
+        "shade_color": "rgba(0, 0, 0, 0.36)",
+        "scrollbar_outline_color": "rgba(0, 0, 0, 0.5)",
+        "sidebar_bg_color": "@headerbar_bg_color",
+        "sidebar_fg_color": "@headerbar_fg_color",
+        "sidebar_border_color": "@headerbar_bg_color",
+        "sidebar_backdrop_color": "@headerbar_bg_color"
+    },
+    "palette": {
+        "blue_": {
+            "1": "rgb(153,193,241)",
+            "2": "rgb(98,160,234)",
+            "3": "rgb(103,176,232)",
+            "4": "rgb(28,113,216)",
+            "5": "rgb(26,95,180)"
+        },
+        "green_": {
+            "1": "rgb(143,240,164)",
+            "2": "rgb(87,227,137)",
+            "3": "rgb(140,207,126)",
+            "4": "rgb(46,194,126)",
+            "5": "rgb(38,162,105)"
+        },
+        "yellow_": {
+            "1": "rgb(249,240,107)",
+            "2": "rgb(248,228,92)",
+            "3": "rgb(229,199,107)",
+            "4": "rgb(245,194,17)",
+            "5": "rgb(229,165,10)"
+        },
+        "orange_": {
+            "1": "#ffbe6f",
+            "2": "#ffa348",
+            "3": "#ff7800",
+            "4": "#e66100",
+            "5": "#c64600"
+        },
+        "red_": {
+            "1": "rgb(246,97,81)",
+            "2": "rgb(237,51,59)",
+            "3": "rgb(229,116,116)",
+            "4": "rgb(192,28,40)",
+            "5": "rgb(165,29,45)"
+        },
+        "purple_": {
+            "1": "rgb(220,138,221)",
+            "2": "rgb(192,97,203)",
+            "3": "rgb(196,127,213)",
+            "4": "rgb(129,61,156)",
+            "5": "rgb(97,53,131)"
+        },
+        "brown_": {
+            "1": "#cdab8f",
+            "2": "#b5835a",
+            "3": "#986a44",
+            "4": "#865e3c",
+            "5": "#63452c"
+        },
+        "light_": {
+            "1": "rgb(255,255,255)",
+            "2": "rgb(246,245,244)",
+            "3": "rgb(218,218,218)",
+            "4": "rgb(192,191,188)",
+            "5": "rgb(154,153,150)"
+        },
+        "dark_": {
+            "1": "#77767b",
+            "2": "#5e5c64",
+            "3": "#3d3846",
+            "4": "#241f31",
+            "5": "#000000"
+        }
+    },
+    "custom_css": {
+        "gtk4": "",
+        "gtk3": ""
+    },
+    "plugins": {}
+}
